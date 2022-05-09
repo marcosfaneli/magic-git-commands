@@ -24,5 +24,13 @@
 # Quando foi alterado hash dos commits local, ficando diferente do remoto. atualiza local primeiro e depois sobre as alterações
  git pull origin nome_branch --rebase -f
 
-# Cancelar um merge(pull ou reabse) em andamento
+# Cancelar um merge(pull ou rebase) em andamento
  git reset --hard HEAD
+
+# Sobrepor uma branch
+link: http://stackoverflow.com/questions/2763006/change-the-current-branch-to-master-in-git
+
+git checkout outra_branch
+git merge --strategy=ours master    # Mantém o conteúdo da branch, porém grava o merge
+git checkout master
+git merge outra_branch             # Faz o merge de volta para a master 
