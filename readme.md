@@ -34,3 +34,7 @@ git checkout outra_branch
 git merge --strategy=ours master    # Mantém o conteúdo da branch, porém grava o merge
 git checkout master
 git merge outra_branch             # Faz o merge de volta para a master 
+
+
+# Limpar cache de usuários
+git config --global --unset credential.helper
