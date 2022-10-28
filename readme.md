@@ -35,6 +35,8 @@ git merge --strategy=ours master    # Mantém o conteúdo da branch, porém grav
 git checkout master
 git merge outra_branch             # Faz o merge de volta para a master 
 
+# Salvar credenciais de usuário no cache
+git config --global credential.helper "cache --timeout=86400"
 
 # Limpar cache de usuários
 git config --global --unset credential.helper
